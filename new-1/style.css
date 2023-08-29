@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin");
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+}
+
+li {
+  white-space: nowrap;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #1a1a1a;
+  background-color: #eee;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+  background: #303238;
+  transition: all 0.4s ease-out;
+}
+
+.nav-link {
+  color: inherit;
+  transition: all 0.4s;
+  text-decoration: none;
+}
+
+.nav-brand {
+  flex: 1 auto;
+  padding: 0 16px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  overflow: hidden;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.nav-brand a {
+  display: inline-block;
+  text-decoration: none;
+  color: #8dcde8;
+}
+.nav-brand img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: initial;
+}
+
+@media (min-width: 768px) {
+  .nav-brand {
+    flex: 0 1 auto;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+.nav-collapse {
+  flex: 1 1 auto;
+  order: 0;
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+}
+.nav-list__item {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 50px;
+}
+.nav-list__item:first-child {
+  margin: 0;
+}
+
+.submenu--trigger {
+  position: relative;
+  cursor: pointer;
+}
+.submenu--trigger:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.third-submenu--trigger {
+  position: relative;
+  cursor: pointer;
+}
+.third-submenu--trigger:hover .third-submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.submenu--trigger i,
+.third-submenu--trigger i {
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.third-submenu--trigger i {
+  transform: rotate(-45deg);
+}
+
+.submenu,
+.third-submenu {
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  background: #303238;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  transition: 0.2s ease-out;
+}
+.submenu li,
+.third-submenu li {
+  border-top: 1px solid #525252;
+}
+.submenu li:hover,
+.third-submenu li:hover {
+  background: #3c3e46;
+}
+
+.submenu {
+  top: 50px;
+}
+
+.third-submenu {
+  top: 0;
+  left: 100%;
+}
+
+@media (max-width: 767px) {
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0em;
+    transition: max-height 0.4s;
+  }
+  .nav-list.showing {
+    max-height: 32em;
+    transition: max-height 0.4s;
+  }
+  .nav-list li {
+    display: inline-block;
+    background: #303238;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #525252;
+  }
+  .nav-collapse {
+    margin: 0;
+    flex: 1 100%;
+    order: 2;
+  }
+  .nav-list__item {
+    padding: 0;
+  }
+  .nav-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 16px;
+    opacity: 1;
+  }
+  .submenu {
+    top: 0;
+    height: 0px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    transition: 0.4s ease;
+  }
+  .submenu li {
+    background: #393b42;
+    display: block;
+    padding-left: 20px;
+  }
+  .submenu--trigger.active .submenu {
+    height: auto;
+  }
+  .third-submenu {
+    height: 0px;
+    display: block;
+    position: static;
+    overflow: hidden;
+    margin-left: -20px;
+  }
+  .third-submenu li {
+    background: #424654;
+    padding-left: 40px;
+  }
+  .third-submenu--trigger.active .third-submenu {
+    height: auto;
+  }
+  .submenu,
+  .third-submenu {
+    box-shadow: none;
+  }
+  .submenu--trigger i,
+  .third-submenu--trigger i {
+    right: 15px;
+  }
+}
+.main-section {
+  width: 100%;
+  padding: 15px 24px 0;
+}/*# sourceMappingURL=style.css.map */

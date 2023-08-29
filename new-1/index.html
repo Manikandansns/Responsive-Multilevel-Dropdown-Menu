@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class='page-wrapper'>
+    <header>
+      <div class="nav-brand">
+        <a href="#">Brand</a>
+      </div>
+  
+      <div class="nav-collapse">
+        <nav role="navigation">
+          <ul class="nav-list" id="collapse" >
+            <li class="nav-list__item"><a class='nav-link' href="#">Home</a></li>
+            <li class="nav-list__item submenu--trigger">
+              <a class='nav-link' href="#">Gallery<i class="caret-down-icon"></i></a>
+              <ul class="submenu">
+                <li class="nav-list__item"><a class='nav-link' href="www.google.com">First Sub Item</a></li>
+                <li class="nav-list__item third-submenu--trigger">
+                  <a class='nav-link' href="www.google.com">Sub Item 2<i class="caret-down-icon"></i></a>
+                  <ul class="third-submenu">
+                    <li class="nav-list__item"><a class='nav-link' href="www.google.com">Second level sub 1</a></li>
+                    <li class="nav-list__item"><a class='nav-link' href="www.google.com">Second level sub 2</a></li>
+                    <li class="nav-list__item"><a class='nav-link' href="www.google.com">Second level sub 3</a></li>
+                  </ul>
+                </li>
+                <li class="nav-list__item"><a class='nav-link' href="www.google.com">Sub 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-list__item"><a class='nav-link' href="#">Services</a></li>
+            <li class="nav-list__item"><a class='nav-link' href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <div class="nav-utilities">
+        <ul class="nav-list">
+          <li class="nav-list__item"><a class="nav-link" href="#" role="button"><i class="fa fa-facebook fa-fw"></i></a></li>
+          <li class="nav-list__item"><a class="nav-link" href="#" role="button"><i class="fa fa-twitter fa-fw"></i></a></li>
+        </ul>
+      </div>
+  
+      <div class="nav-toggle">
+        <a class="btn--toggle nav-link" href="#" data-target="#collapse">
+          <i class="fa fa-bars fa-fw"></i>
+        </a>
+      </div>
+    
+    </header>
+    
+    <main class="main-section">
+      <h2>Simple way to implement a responsive dropdown menu.</h2> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quis reprehenderit dicta odit, amet ab debitis placeat quisquam rem dolores repellat architecto asperiores vel labore laborum, nobis beatae assumenda. Excepturi, iste sint impedit itaque voluptates, et laudantium. Voluptatem voluptas, perferendis quaerat ex rerum, cumque, maiores iusto culpa enim dicta alias?</p>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
